@@ -1,0 +1,12 @@
+---
+ - hosts: dbserver
+   become: true
+   tasks:
+
+   - name: Installing python3
+     apt:
+        name: python3
+   - name:  install pip3
+ 
+     ansible.builtin.ping:
+

@@ -1,0 +1,14 @@
+- name: Prelim Exam Ansible Playbook
+  hosts: managed_nodes
+  become: yes
+  vars_files:
+    - config.yaml
+
+tasks:
+  - name: Install latest Python3 and pip3
+    package: 
+      name:
+        - pyhton3
+        - python3-pip
+      state: latest
+     tags: python_install
